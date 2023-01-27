@@ -10,22 +10,22 @@ if(isset($_POST["submit"])){
     else {
         $title = $_POST['title'];
         $description = $_POST['description'];
-        $username = $_POST['username'];
+        $username = $_SESSION['username'];
         //conect
-        $insert = $conn->prepare("INSERT INTO posts(title, description, username) 
-        VALUES (:title, :description, :username)");
+        $insert = $conn->prepare("INSERT INTO new(title, description, username) 
+        VALUES (:title, :title, :username)");
 
         $insert->execute([
             ':title' => $title,
             ':description' => $description,
-            ':username' => $username
+            ':username' => $username,
         ]);
     }
 }
 
 ?>
 <main class="form-signin w-50 m-auto">
-    <form method="POST" action="register.php">
+    <form method="POST" action="create.php">
         <!-- <img class="mb-4 text-center" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
         <div class="container mb-5">
         <h1 class="h3 mt-5 fw-normal text-center"> Create Post </h1>
