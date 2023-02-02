@@ -13,8 +13,8 @@
                     $user, 
                     $pass);
 
-    if($conn == true) {
-        echo "it's working fine";
-    } else {
-        echo "connection is wrong: err";
-    }
+    // if($conn == true) {
+    //     echo "it's working fine";
+    // } else {
+    //     echo "connection is wrong: err";
+    // }

@@ -1,5 +1,5 @@
 <?php require "includes/header.php"; ?>
-<?php require "config.php"; ?>
+<?php require "db/config.php"; ?>
 
 <?php
 // "hello " . $_SESSION['username'];
@@ -10,21 +10,13 @@
 
 <main class="container w-50 m-auto mt-3">
     <section class="container mb-5">
-<h1> Serph Comments </h1>
-<a href="create.php"> Create Post</a>
-    </section>
-    <?php foreach($rows as $row) : ?>
-        <body>
-            <div class="card">
-                <div class="card-body">
 
-                <h2 class="card-title"><?php echo $row->title; ?></h2>
-                <p class="card-text"><?php echo $row->description; ?></p>
-                <a href="show.php?id=<?php echo $row->id;?>"> Ir al post</a>
-
+    <div class="card">
+        <div class="card-content">
+            <h2> Frases </h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <a href="index-two.php"> Frases</a>
+        </div>
     </div>
-    </div>
-        </body>
-    <?php endforeach; ?>
 </main>
 <?php require "includes/footer.php"; ?>

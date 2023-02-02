@@ -13,13 +13,15 @@ if(isset($_POST["submit"])){
         $username = $_SESSION['username'];
         //conect
         $insert = $conn->prepare("INSERT INTO new(title, description, username) 
-        VALUES (:title, :title, :username)");
+        VALUES (:title, :description, :username)");
 
         $insert->execute([
             ':title' => $title,
             ':description' => $description,
             ':username' => $username,
         ]);
+
+        header("location: index-two.php");
     }
 }
 

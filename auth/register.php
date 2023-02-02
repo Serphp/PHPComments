@@ -1,5 +1,5 @@
-<?php require "includes/header.php"; ?>
-<?php require "config.php"; ?>
+<?php require "../includes/header.php"; ?>
+<?php require "../db/config.php"; ?>
 
 <?php
 if (isset($_SESSION['username'])) {
@@ -54,4 +54,4 @@ if (isset($_POST['submit'])) {
 
     </form>
 </main>
-<?php require "includes/footer.php"; ?>
+<?php require "../includes/footer.php"; ?>
