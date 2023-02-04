@@ -1,5 +1,5 @@
 <?php require "includes/header.php"; ?>
-<?php require "config.php"; ?>
+<?php require "db/config.php"; ?>
 
 <?php
 // "hello " . $_SESSION['username'];
@@ -19,8 +19,8 @@
             <div class="card-body">
 
             <h2 class="card-title"><?php echo $row->title; ?></h2>
-            <p class="card-text"><?php echo $row->description; ?></p>
-            <a href="show.php?id=<?php echo $row->id;?>"> Ir al post</a>
+            <p class="card-text"><?php echo substr($row->description,0,80). '...'; ?></p>
+            <a href="post.php?id=<?php echo $row->id;?>"> Ir al post</a>
 
             </div>
             </div>
