@@ -1,13 +1,4 @@
 <?php
-if (isset($_SESSION['username'])) {
-
-$host  = $_SERVER['HTTP_HOST'];
-$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-$extra = 'index.php';
-header("Location: http://$host$uri/$extra");
-  //header("location: index.php", false);
-}
-
 
 if (isset($_POST['submit'])) {
   // Condition 
@@ -19,9 +10,9 @@ if (isset($_POST['submit'])) {
         VALUES (:username, :post_id, :comment)");
 
     $insert->execute([
-        ':email' => $username,
-        ':username' => $post_id,
-        ':mypassword' => $comment,
+        ':username' => $username,
+        ':post_id' => $post_id,
+        ':comment' => $comment,
     ]);
 }
 
