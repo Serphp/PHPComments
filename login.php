@@ -1,5 +1,5 @@
-<?php require "../includes/header.php"; ?>
-<?php require "../db/config.php"; ?>
+<?php require "includes/header.php"; ?>
+<?php require "db/config.php"; ?>
 
 <?php
 
@@ -52,4 +52,4 @@ if (isset($_POST['submit'])) {
         <h6 class="mt-3">Don't have an account <a href="register.php">Create your account</a></h6>
     </form>
 </main>
-<?php require "../includes/footer.php"; ?>
+<?php require "includes/footer.php"; ?>

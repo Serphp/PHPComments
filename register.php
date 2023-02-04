@@ -1,9 +1,14 @@
-<?php require "../includes/header.php"; ?>
-<?php require "../db/config.php"; ?>
+<?php require "includes/header.php"; ?>
+<?php require "db/config.php"; ?>
 
 <?php
 if (isset($_SESSION['username'])) {
-  header("location: index.php");
+
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+$extra = 'index.php';
+header("Location: http://$host$uri/$extra");
+  //header("location: index.php", false);
 }
 
 
@@ -54,4 +59,4 @@ if (isset($_POST['submit'])) {
 
     </form>
 </main>
-<?php require "../includes/footer.php"; ?>
+<?php require "includes/footer.php"; ?>
