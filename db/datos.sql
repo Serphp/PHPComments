@@ -13,7 +13,6 @@ ALTER TABLE
     `users` MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 8;
 
-/ / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
 CREATE TABLE
     `new` (
         `id` int(3) NOT NULL,
@@ -28,5 +27,16 @@ ALTER TABLE `new` ADD PRIMARY KEY (`id`);
 ALTER TABLE
     `new` MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 8;
+
+CREATE TABLE
+    `comments` (
+        `id` int(3) NOT NULL,
+        `username` varchar(200) NOT NULL,
+        `post_id` int(3) NOT NULL,
+        `comment` TEXT NOT NULL,
+        `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+    ) ENGINE = InnoDB;
+
+ALTER TABLE `comments` ADD PRIMARY KEY (`id`);
 
 COMMIT;
